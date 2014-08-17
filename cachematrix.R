@@ -4,18 +4,17 @@
 
 ## The function makeCacheMatrix creates the specialized matrix.
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x) {
         ## This creates a special matrix.
-        m=matrix()
         m<-NULL
-        set<-function(y=matrix()){
+        set<-function(y){
                x<<-y
                m<<-NULL
         }
         get<-function()x
         setsolve<-function (solve)m<<-solve
         getsolve<-function()m
-        list(set=set, get=get, setsolve=setsolve, getsolve=setsolve)
+        list(set=set, get=get, setsolve=setsolve, getsolve=getsolve)
 }
 
 
